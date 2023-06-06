@@ -4,6 +4,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+To start with the project, clone and run:
+
+### `npm install`
+
+Replace GOOGLE_API_KEY in src/react/constants.ts
+
 In the project directory, you can run:
 
 ### `npm start`

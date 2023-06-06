@@ -2,7 +2,9 @@ import { combineReducers, getDefaultMiddleware } from '@reduxjs/toolkit';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
 import { combineEpics, createEpicMiddleware } from 'redux-observable';
 import { getStore, setupStore } from './reduxStore';
+import { createBrowserHistory } from "history";
 
+const history = createBrowserHistory();
 const epicMiddleware = createEpicMiddleware();
 
 const middleware = [
@@ -24,6 +26,6 @@ export const configureAppStore = () => {
     setupStore(rootReducer, middleware);
     const store = getStore();
     epicMiddleware.run(rootEpic as any);
-    
+
     return store;
 };

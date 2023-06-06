@@ -7,6 +7,7 @@ const searchAndShowSlice = createSlice({
     initialState,
     reducers: {
         updateMapCenter(state, action: PayloadAction<MapCenter>) {
+            console.log(action.payload)
             state.mapCenter = action.payload;
         }
     },

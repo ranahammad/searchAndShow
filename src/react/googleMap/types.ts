@@ -1,3 +1,4 @@
+import { IProvidedProps } from "google-maps-react";
 import { updateMapCenter, MapCenter } from "../../redux/searchAndShow";
 
 export interface StateProps {
@@ -5,10 +6,10 @@ export interface StateProps {
 }
 
 export interface DispatchProps {
-    updateMapCenter: typeof updateMapCenter;
+    updateCenter: typeof updateMapCenter;
 }
 
 export interface OwnProps{
 }
 
-export type GoogleMapComponentProps = StateProps & DispatchProps & OwnProps;
+export type GoogleMapComponentProps = IProvidedProps & StateProps & DispatchProps & OwnProps;
